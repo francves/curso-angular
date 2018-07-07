@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Primera app Fran!';
+  a = 3;
+  b = 4;
+  listo = true;
+  constructor(){
+  	setTimeout(() => {
+  		this.listo = false;
+  		console.log("Hola");
+  	}, 4000)
+  }
 }
