@@ -7,9 +7,14 @@ import {FormsModule} from '@angular/forms';
 //Modulo de google maps par angular
 import { AgmCoreModule } from '@agm/core';
 
+import {ResaltarDirective} from "./directives/resaltar.directive";
+import {ContarClicksDirective} from "./directives/contar-clicks.directive";
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltarDirective,
+    ContarClicksDirective
   ],
   imports: [
     BrowserModule,
