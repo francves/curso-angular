@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Primera app Fran!';
+  lat:number = 10.0752569;
+  lng:number = -69.3004637;
   lugares:any = [
   {active: false, nombre: "Floristeria don pepe"},
   {active: true, nombre: "Pizzería mamma mía!"},
