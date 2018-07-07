@@ -1,4 +1,4 @@
 String Interpolation {{}} Typescript => HTML
-Property Binding [] TypeScript <= HTML
+Property Binding [] TypeScript => HTML
 Event Binding [] Typescript <= HTML
 Two way data binding [()] Typescript <=> HTML
