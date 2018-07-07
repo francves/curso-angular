@@ -8,9 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Primera app Fran!';
   lugares:any = [
-  {nombre: "Floristeria don pepe"},
-  {nombre: "Pizzería mamma mía!"},
-  {nombre: "Auto lavado carwash"}
+  {active: false, nombre: "Floristeria don pepe"},
+  {active: true, nombre: "Pizzería mamma mía!"},
+  {active: true, nombre: "Auto lavado carwash"},
+  {active: false, nombre: "Heladería icecream"},
+  {active: true, nombre: "Zapatería el juanete"},
+  {active: true, nombre: "Frutería my apple"}
   ]
   constructor(){
   
