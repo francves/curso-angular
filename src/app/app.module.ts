@@ -14,7 +14,7 @@ import {ContarClicksDirective} from "./directives/contar-clicks.directive";
   declarations: [
     AppComponent,
     ResaltarDirective,
-    ContarClicksDirective
+    //ContarClicksDirective
   ],
   imports: [
     BrowserModule,
