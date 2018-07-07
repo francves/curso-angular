@@ -11,6 +11,8 @@ export class AppComponent {
   b = 4;
   listo = true;
   contador = 0;
+  nombre;
+  apellido;
   constructor(){
   	setTimeout(() => {
   		this.listo = false;
