@@ -1,1 +1,15 @@
-<h1>Detalle</h1>
+<div class="card bg-light">
+	<pre><a routerLink="/lugares">Lugares</a> / {{lugar.nombre}}</pre>
+</div>
+<div class="container">
+	<h1>{{lugar.nombre}}</h1>
+	<hr />
+	<small>{{lugar.distancia}} km</small>
+	<br />
+	<div class="card bg-light">
+		<p>
+			{{lugar.descripcion}}
+		</p>
+		<b>Plan: {{lugar.plan}}</b>
+	</div>
+</div>
