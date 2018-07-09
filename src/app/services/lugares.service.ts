@@ -19,7 +19,8 @@ lugares:any = [
 
   }
   public getLugares(){
-  	return this.afDB.list('lugares/');
+  	//return this.afDB.list('lugares/');
+    return this.http.get(this.API_ENDPOINT+'/lugares.json');
   }
   public buscarLugar(id){
     return this.lugares.filter((lugar) => { return lugar.id == id })[0] || null;

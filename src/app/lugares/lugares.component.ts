@@ -13,8 +13,9 @@ export class LugaresComponent {
   lugares = null;
   constructor(private lugaresService: LugaresService){
     lugaresService.getLugares()
-    	.valueChanges().subscribe((lugares) => {
-    		this.lugares = lugares;
+    	.subscribe((lugares) => {
+    		this.lugares = lugares.json();
+        this.lugares = Object.keys(this.lugares).map((key) => this.lugares[key]);
     	});
   }
 }
