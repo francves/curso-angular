@@ -14,10 +14,10 @@ lugares:any = [
   {id: 6, plan: 'gratuito', cercania: 3, distancia: 120, active: true, nombre: "Frutería my apple", descripcion: "La descripcion no se encuentra disponible en este momento..."}
   ];
   constructor(private afDB: AngularFireDatabase){
-    
+
   }
   public getLugares(){
-  	return this.lugares;
+  	return this.afDB.list('lugares/');
   }
   public buscarLugar(id){
     return this.lugares.filter((lugar) => { return lugar.id == id })[0] || null;
@@ -25,6 +25,6 @@ lugares:any = [
 
   public guardarLugar(lugar){
     console.log(lugar);
-    this.afDB.database.ref('lugares/1').set(lugar);
+    this.afDB.database.ref('lugares/'+lugar.id).set(lugar);
   }
 }
