@@ -16,6 +16,9 @@ export class LugaresComponent {
     	.subscribe((lugares) => {
     		this.lugares = lugares;
         this.lugares = Object.keys(this.lugares).map((key) => this.lugares[key]);
+      }, error => {//En javascript el primer callback se ejecuta si todo 
+        //sale bien, si hay algún error se ejecuta el segundo
+        console.log(error);
     	});
   }
 }
