@@ -2,3 +2,8 @@ String Interpolation {{}} Typescript => HTML
 Property Binding [] TypeScript => HTML
 Event Binding [] Typescript <= HTML
 Two way data binding [()] Typescript <=> HTML
+
+routerLinkActive="active"
+routerLinkActive="cualquier clase"
+
+Ese atributo aplica la clase que queremos al link activo de la barra de navegación
