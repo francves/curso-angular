@@ -4,6 +4,8 @@ import {AngularFireDatabase} from "angularfire2/database/database";
 
 import {Http, Headers} from "@angular/http";
 
+import { map } from 'rxjs/operators'
+
 @Injectable()
 export class LugaresService {
   API_ENDPOINT = "https://platzisquare-cur-1530981470746.firebaseio.com/";
@@ -20,7 +22,11 @@ lugares:any = [
   }
   public getLugares(){
   	//return this.afDB.list('lugares/');
-    return this.http.get(this.API_ENDPOINT+'/lugares.json');
+    return this.http.get(this.API_ENDPOINT+'/.json')
+      .pipe(map((resultado) => {
+        const data = resultado.json().lugares;
+        return data;
+      }))
   }
   public buscarLugar(id){
     return this.lugares.filter((lugar) => { return lugar.id == id })[0] || null;
