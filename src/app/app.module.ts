@@ -17,6 +17,7 @@ import {LugaresComponent} from "./lugares/lugares.component";
 import {ContactoComponent} from "./contacto/contacto.component";
 
 import {LugaresService} from "./services/lugares.service";
+import {AutorizacionService} from "./services/autorizacion.service";
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
@@ -77,7 +78,7 @@ export const firebaseConfig = {
      HttpModule,
      BrowserAnimationsModule
   ],
-  providers: [LugaresService],
+  providers: [LugaresService, AutorizacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
