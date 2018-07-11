@@ -37,7 +37,7 @@ export class LugaresComponent {
   }
   constructor(private lugaresService: LugaresService){
     lugaresService.getLugares()
-    	.subscribe((lugares) => {
+    	.valueChanges().subscribe((lugares) => {
     		this.lugares = lugares;
         this.lugares = Object.keys(this.lugares).map((key) => this.lugares[key]);
         this.state = 'final';
