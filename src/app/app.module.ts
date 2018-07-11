@@ -30,12 +30,17 @@ import {LinkifystrPipe} from "./pipes/linkifystr.pipe";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import {LoginComponent} from "./login/login.component";
+import {RegistroComponent} from "./registro/registro.component";
+
 const appRoutes: Routes = [
   {path: '', component: LugaresComponent},
   {path: 'lugares', component: LugaresComponent},
   {path: 'detalle/:id', component: DetalleComponent},
   {path: 'contacto', component: ContactoComponent},
-  {path: 'crear/:id', component: CrearComponent}
+  {path: 'crear/:id', component: CrearComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent}
 ];
 
 export const firebaseConfig = {
@@ -55,7 +60,9 @@ export const firebaseConfig = {
     LugaresComponent,
     ContactoComponent,
     CrearComponent,
-    LinkifystrPipe
+    LinkifystrPipe,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
