@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {CanActivate} from "@angular/router";
-
+import {AutorizacionService} from "./autorizacion.service";
 
 @Injectable()
 export class MyGuard implements CanActivate{
