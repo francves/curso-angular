@@ -32,7 +32,7 @@ export class CrearComponent {
 					alert("Negocio editado con éxito");
 				}else{
 					this.lugar.id = Date.now();
-					this.lugaresService.guardarLugar(this.lugar).subscribe();
+					this.lugaresService.guardarLugar(this.lugar);
 					alert("Negocio guardado con éxito");
 				}
 				this.lugar = {};

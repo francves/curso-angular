@@ -28,4 +28,7 @@ export class AutorizacionService {
 				console.log(error);
 			})
 	}
+	public isLogged(){
+		return this.angularFireAuth.authState;
+	}
 }
