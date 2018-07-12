@@ -1,13 +1,9 @@
-import { Component } from '@angular/core';
-import {AutorizacionService} from "./services/autorizacion.service";
+import {Injectable} from "@angular/core";
+import {CanActivate} from "@angular/router";
 
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
+@Injectable()
+export class MyGuard implements CanActivate{
 	loggedIn = false;
 	constructor(private autorizacionService: AutorizacionService){
 		this.autorizacionService.isLogged()
@@ -20,5 +16,8 @@ export class AppComponent {
 			}, (error) => {
 				this.loggedIn = false;
 			}) 
+	}
+	canActivate(){
+		return this.loggedIn;
 	}
 }

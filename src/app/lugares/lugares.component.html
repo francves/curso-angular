@@ -9,7 +9,7 @@
       <a class="btn btn-primary" routerLink="/crear/new">Crear Nuevo Negocio</a>
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
-          <li class="list-group-item" *ngIf="lugar.plan == 'gratuito'">>
+          <li class="list-group-item" *ngIf="lugar.plan == 'gratuito'">
           <a routerLink="/crear/{{lugar.id}}">
           <h2>{{lugar.nombre | titlecase}}</h2>
           </a>

@@ -4,7 +4,7 @@ import {AngularFireAuth} from "angularfire2/auth/auth";
 @Injectable()
 export class AutorizacionService {
 	constructor(private angularFireAuth: AngularFireAuth){
-
+		this.isLogged();
 	}
 	public login = (email, password) => {
 		this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
