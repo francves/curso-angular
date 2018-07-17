@@ -17,10 +17,17 @@
 	<label>Plan</label>
 	<input type="text" class="form-control" [(ngModel)]="lugar.plan" />
 	<h3>Datos de Dirección</h3>
-	<label>Calle y Carrera</label>
-	<input type="text" class="form-control" placeholder="Calle 34, Carrera 25" [(ngModel)]="lugar.calle" />
-	<label>Ciudad</label>
-	<input type="text" class="form-control" [(ngModel)]="lugar.ciudad" />
+	<div class="card bg-light">
+		<form>
+			<label>Buscar Negocio en Google</label>
+			<input [formControl]="searchField" type="text" class="form-control" />
+		</form>
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let result of results$ | async" (click)="seleccionarDireccion(result)">{{result.formatted_address}}</li>
+		</ul>
+	</div>
+	<label>Ubicación</label>
+	<input type="text" class="form-control" placeholder="Barquisimeto, Av Venezuela" [(ngModel)]="lugar.ubicacion" />
 	<label>Estado</label>
 	<input type="text" class="form-control" [(ngModel)]="lugar.estado" />
 	<label>País</label>

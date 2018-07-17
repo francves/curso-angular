@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 //Modulo de google maps par angular
 import { AgmCoreModule } from '@agm/core';
@@ -79,7 +79,8 @@ export const firebaseConfig = {
      AngularFireDatabaseModule,
      AngularFireAuthModule,
      HttpModule,
-     BrowserAnimationsModule
+     BrowserAnimationsModule,
+     ReactiveFormsModule
   ],
   providers: [LugaresService, AutorizacionService, MyGuard],
   bootstrap: [AppComponent]
